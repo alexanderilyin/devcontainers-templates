@@ -25,3 +25,6 @@ filename = "src/partcad/devcontainer-template.json"
 
 [[tool.bumpversion.files]]
 filename = "src/ubik/devcontainer-template.json"
+
+[[tool.bumpversion.files]]
+filename = ".github/actions/smoke-test/publish.sh"
