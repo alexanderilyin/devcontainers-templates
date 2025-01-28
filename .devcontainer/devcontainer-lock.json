@@ -15,18 +15,15 @@
       "resolved": "ghcr.io/devcontainers/features/github-cli@sha256:13b301a039ce9e0bb07d45ea0c106c946cfff01c3b9844bbec6b0c7bacba8de3",
       "integrity": "sha256:13b301a039ce9e0bb07d45ea0c106c946cfff01c3b9844bbec6b0c7bacba8de3"
     },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "1.7.0",
+      "resolved": "ghcr.io/devcontainers/features/python@sha256:8452f39db0852420728c9f7503dd94b3fc71aa558b5e7c8f6f9ce6687e494ae3",
+      "integrity": "sha256:8452f39db0852420728c9f7503dd94b3fc71aa558b5e7c8f6f9ce6687e494ae3"
+    },
     "ghcr.io/partcad/devcontainers-features/apt:2": {
       "version": "2.0.0",
       "resolved": "ghcr.io/partcad/devcontainers-features/apt@sha256:285ee2907fe57bd2f69b021e3eb72d78ff8116b3a4f93bd8dea1249b88a18310",
       "integrity": "sha256:285ee2907fe57bd2f69b021e3eb72d78ff8116b3a4f93bd8dea1249b88a18310"
-    },
-    "ghcr.io/partcad/devcontainers-features/pip:2": {
-      "version": "2.0.1",
-      "resolved": "ghcr.io/partcad/devcontainers-features/pip@sha256:279750f4f06e57d4eef21316f87fdee494377d1bbdc069a6cad0a7da859143a9",
-      "integrity": "sha256:279750f4f06e57d4eef21316f87fdee494377d1bbdc069a6cad0a7da859143a9",
-      "dependsOn": [
-        "ghcr.io/partcad/devcontainers-features/apt:2"
-      ]
     },
     "ghcr.io/partcad/devcontainers-features/starship:2": {
       "version": "2.0.1",

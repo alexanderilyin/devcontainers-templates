@@ -2,6 +2,19 @@
 
 [![CI - Test Templates](https://github.com/partcad/devcontainers-templates/actions/workflows/test-pr.yaml/badge.svg)](https://github.com/partcad/devcontainers-templates/actions/workflows/test-pr.yaml)
 
+## Roadmap
+
+- [x] Add `bump-my-version`.
+- [x] Create separate version configurations for each Dev Container
+
+## Bump My Version
+
+- <https://callowayproject.github.io/bump-my-version/>
+
+```bash
+bump-my-version bump --allow-dirty minor --dry-run -vv
+```
+
 ## Packages
 
 - <https://github.com/orgs/partcad/packages?repo_name=devcontainers-templates>

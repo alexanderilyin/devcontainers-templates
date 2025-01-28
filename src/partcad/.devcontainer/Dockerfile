@@ -1,5 +1,3 @@
-FROM ghcr.io/hadolint/hadolint:v2.12.1-beta-debian as hadolint
-
 FROM mcr.microsoft.com/devcontainers/base:bookworm
 
 
@@ -13,7 +11,7 @@ LABEL org.opencontainers.image.version ${IMAGE_VERSION}
 LABEL org.opencontainers.image.licenses "Apache 2.0"
 LABEL org.opencontainers.image.documentation "https://partcad.readthedocs.io"
 
-COPY --from=hadolint /bin/hadolint /usr/local/bin/hadolint
+COPY --from=ghcr.io/hadolint/hadolint:v2.12.1-beta-debian /bin/hadolint /usr/local/bin/hadolint
 
 RUN \
   --mount=type=bind,source=./apt.txt,target=/tmp/apt.txt \
