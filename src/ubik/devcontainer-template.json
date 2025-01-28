@@ -1,10 +1,10 @@
 {
     "id": "ubik",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "Unobtainium",
     "description": "One size, fits all.",
-    "documentationURL": "https://github.com/deep-space-cartel/devcontainers-templates/tree/main/src/ubik",
-    "licenseURL": "https://github.com/deep-space-cartel/devcontainers-templates/blob/main/LICENSE",
+    "documentationURL": "https://github.com/partcad/devcontainers-templates/tree/main/src/ubik",
+    "licenseURL": "https://github.com/partcad/devcontainers-templates/blob/main/LICENSE",
     "options": {
         "imageVariant": {
             "type": "string",

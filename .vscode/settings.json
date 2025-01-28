@@ -1,0 +1,24 @@
+{
+    "editor.fontFamily": "'Hack Nerd Font Mono'",
+    "terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
+    "files.insertFinalNewline": true,
+    "cSpell.enabledFileTypes": {
+        "*": true
+    },
+    "remote.extensionKind": {
+        "ms-vscode.PowerShell": [
+            "ui"
+        ],
+        "1Password.op-vscode": [
+            "ui"
+        ]
+    },
+    "cSpell.words": [
+        "Anson",
+        "hadolint",
+        "mkdocs",
+        "ubik",
+        "Unobtainium",
+        "WAKATIME"
+    ]
+}

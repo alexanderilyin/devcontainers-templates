@@ -1,0 +1,11 @@
+{
+    "id": "partcad",
+    "version": "1.1.0",
+    "name": "PartCAD: Dev Container [base:bookworm]",
+    "description": "Collaborative Assembly & Design",
+    "documentationURL": "https://github.com/partcad/devcontainers-templates/tree/main/src/partcad",
+    "licenseURL": "https://github.com/partcad/devcontainers-templates/blob/main/LICENSE",
+    "platforms": [
+        "Any"
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "pre-commit: manual",
+            "type": "shell",
+            "command": "pre-commit",
+            "args": [
+                "run",
+                "--hook-stage",
+                "manual"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Dev Containers: Build ubik",
+            "type": "shell",
+            "command": ".github/actions/smoke-test/build.sh",
+            "args": [
+                "ubik"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Starship: Install Completions",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "bash",
+                "-c",
+                "starship completions $(basename $SHELL) > /etc/bash_completion.d/99-starship-completions.sh"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Dev Containers: Publish Templates",
+            "type": "shell",
+            "command": "devcontainer",
+            "args": [
+                "templates",
+                "publish",
+                "--namespace",
+                "partcad/devcontainers-templates",
+                "src/"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Dev Containers: Upgrade lockfile",
+            "type": "shell",
+            "command": "devcontainer",
+            "args": [
+                "upgrade",
+                "--workspace-folder",
+                "."
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Dev Container Feature: Generate Docs",
+            "type": "shell",
+            "command": "devcontainer",
+            "args": [
+                "templates",
+                "generate-docs",
+                "--github-owner",
+                "partcad",
+                "--github-repo",
+                "devcontainers-templates",
+                "--project-folder",
+                "src/"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        }
+    ]
+}

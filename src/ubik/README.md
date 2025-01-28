@@ -20,4 +20,4 @@ One size, fits all.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/deep-space-cartel/devcontainers-templates/blob/main/src//ubik/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/partcad/devcontainers-templates/blob/main/src//ubik/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
