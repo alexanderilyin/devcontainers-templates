@@ -5,7 +5,7 @@
 ## Roadmap
 
 - [x] Add `bump-my-version`.
-- [x] Create separate version configurations for each Dev Container
+- [ ] Create separate version configurations for each Dev Container
 
 ## Bump My Version
 

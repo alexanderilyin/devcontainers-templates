@@ -24,6 +24,9 @@ post_commit_hooks = []
 filename = "src/partcad/devcontainer-template.json"
 
 [[tool.bumpversion.files]]
+filename = "src/partcad/.devcontainer/Dockerfile"
+
+[[tool.bumpversion.files]]
 filename = "src/ubik/devcontainer-template.json"
 
 [[tool.bumpversion.files]]
