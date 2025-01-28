@@ -14,3 +14,7 @@
 * `python` v3.10
 * `starship` v1.21.1
 * `yq` v4.44.6
+
+```bash
+docker run -v $PWD:/opt/devcontainer -w $PWD:/opt/devcontainer mcr.microsoft.com/devcontainers/base:bullseye sudo apt-compile.sh
+```

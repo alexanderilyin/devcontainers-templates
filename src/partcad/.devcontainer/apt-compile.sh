@@ -18,6 +18,8 @@ OUTPUT_FILE="apt.txt"
 # Clear the output file if it exists
 true > "$OUTPUT_FILE"
 
+apt-get update
+
 # Read each package from apt.in and resolve dependencies
 while IFS= read -r package || [[ -n "$package" ]]; do
   if [[ -z "$package" || $package == \#* ]]; then
