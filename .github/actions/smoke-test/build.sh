@@ -6,6 +6,7 @@ set -e
 shopt -s dotglob
 
 SRC_DIR="/tmp/${TEMPLATE_ID}"
+rm -rf "${SRC_DIR}"
 cp -R "src/${TEMPLATE_ID}" "${SRC_DIR}"
 
 pushd "${SRC_DIR}"
@@ -52,4 +53,5 @@ npm install -g @devcontainers/cli
 
 echo "Building Dev Container"
 ID_LABEL="test-container=${TEMPLATE_ID}"
+# TODO: @alexanderilyin use "--cache-from" & "--cache-to" options to speed up the build
 devcontainer up --id-label ${ID_LABEL} --workspace-folder "${SRC_DIR}"

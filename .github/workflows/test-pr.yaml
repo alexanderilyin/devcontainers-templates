@@ -4,7 +4,7 @@ on:
 
 jobs:
   detect-changes:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       templates: ${{ steps.filter.outputs.changes }}
     steps:
@@ -13,10 +13,15 @@ jobs:
         with:
           filters: |
             ubik: ./**/ubik/**
+            partcad: ./**/partcad/**
 
   test:
+    permissions:
+      contents: write
+      pull-requests: write
+      packages: write
     needs: [detect-changes]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     continue-on-error: true
     strategy:
       matrix:
@@ -29,3 +34,5 @@ jobs:
         uses: ./.github/actions/smoke-test
         with:
           template: "${{ matrix.templates }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

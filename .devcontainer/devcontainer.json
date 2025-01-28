@@ -1,43 +1,76 @@
-// More info: https://containers.dev/implementors/json_reference/
 {
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
-    "remoteEnv": {
-        "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}",
-        "PRE_COMMIT_HOME": "${containerWorkspaceFolder}/.pre-commit",
-        "WAKATIME_API_KEY": "${localEnv:WAKATIME_API_KEY}"
-    },
-    "features": {
-        "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/github-cli:1": {},
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/partcad/devcontainers-features/starship:2": {},
-        "ghcr.io/partcad/devcontainers-features/apt:2": {
-            "packages": "bash-completion shellcheck mc python3-pip python3-venv" // shfmt
-        },
-        "ghcr.io/devcontainers/features/python:1": {
-            "installTools": true,
-            "toolsToInstall": [
-                "pre-commit"
-            ],
-            "version": "latest"
-        }
-    },
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "dotfiles.repository": "partcad/dotfiles"
-            },
-            "extensions": [
-                "DavidAnson.vscode-markdownlint",
-                "dbaeumer.vscode-eslint",
-                "GitHub.vscode-codeql",
-                "GitHub.vscode-github-actions",
-                "GitHub.vscode-pull-request-github",
-                "mads-hartmann.bash-ide-vscode",
-                "streetsidesoftware.code-spell-checker",
-                "yzhang.markdown-all-in-one"
-            ]
-        }
-    },
-    "postCreateCommand": "npm install -g @devcontainers/cli"
+	"name": "Unobtainium",
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"remoteUser": "vscode",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/partcad/devcontainers-features/starship:2": {},
+		"ghcr.io/partcad/devcontainers-features/apt:2": {
+			"packages": "bash-completion shellcheck mc python3-pip python3-venv" // shfmt
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.12",
+			"installTools": true,
+			"toolsToInstall": "pre-commit,mkdocs,bump-my-version"
+		},
+		"ghcr.io/devcontainers-extra/features/devcontainers-cli:1": {
+			"version": "latest"
+		}
+	},
+	"postCreateCommand": {
+		"mkdocs": "pipx inject mkdocs mkdocs-material"
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.fontFamily": "'Hack Nerd Font Mono'",
+				"terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
+				"files.insertFinalNewline": true,
+				"dotfiles.repository": "partcad/dotfiles",
+				"cSpell.enabledFileTypes": {
+					"*": true
+				},
+				"remote.extensionKind": {
+					"ms-vscode.PowerShell": [
+						"ui"
+					],
+					"1Password.op-vscode": [
+						"ui"
+					]
+				}
+			},
+			"extensions": [
+				"1Password.op-vscode",
+				"Codeium.codeium",
+				"DavidAnson.vscode-markdownlint",
+				"GitHub.vscode-codeql",
+				"GitHub.vscode-github-actions",
+				"GitHub.vscode-pull-request-github",
+				"mads-hartmann.bash-ide-vscode",
+				"streetsidesoftware.code-spell-checker",
+				"yzhang.markdown-all-in-one",
+				"ms-azuretools.vscode-docker"
+			],
+			"tasks": {
+				"version": "2.0.0",
+				"tasks": [
+					{
+						"label": "pre-commit: manual",
+						"type": "shell",
+						"command": "pre-commit",
+						"args": [
+							"run",
+							"--hook-stage",
+							"manual"
+						],
+						"group": {
+							"kind": "test",
+							"isDefault": true
+						}
+					}
+				]
+			}
+		}
+	}
 }
