@@ -13,8 +13,9 @@ LABEL org.opencontainers.image.documentation "https://partcad.readthedocs.io"
 
 COPY --from=ghcr.io/hadolint/hadolint:v2.12.1-beta-debian /bin/hadolint /usr/local/bin/hadolint
 
+# TODO: Enable support for apt.txt workflow
 RUN \
-  --mount=type=bind,source=./apt.txt,target=/tmp/apt.txt \
+  --mount=type=bind,source=./apt.in,target=/tmp/apt.in \
   --mount=type=bind,source=./apt.sh,target=/tmp/apt.sh \
   /tmp/apt.sh
 
