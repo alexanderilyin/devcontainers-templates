@@ -1,5 +1,6 @@
 name: "CI - Test Templates"
 on:
+  merge_group:
   pull_request:
 
 jobs:
