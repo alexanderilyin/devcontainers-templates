@@ -47,19 +47,19 @@ find src/ -mindepth 1 -maxdepth 1 -type d | xargs -n1 devcontainer upgrade --wor
 
 ```bash
 devcontainer templates apply --template-id  ghcr.io/partcad/devcontainers-templates/ubik --workspace-folder tmp --log-level debug
-devcontainer build --push --log-level debug --image-name test --label test --workspace-folder ./tmp/
+devcontainer build --push --log-level debug --image-name ghcr.io/partcad/devcontainer-ubik:1.1.0 --workspace-folder tmp # --label test 
 ```
 
 ### PartCAD
 
 ```bash
 devcontainer templates apply --template-id  ghcr.io/partcad/devcontainers-templates/partcad --workspace-folder build/partcad --log-level trace
-devcontainer build --push --log-level debug --image-name ghcr.io/partcad/devcontainer-partcad:latest --workspace-folder build/partcad # --label test
+devcontainer build --push --log-level debug --image-name ghcr.io/partcad/devcontainer-partcad:1.1.0 --workspace-folder build/partcad
 ```
 
 ```bash
-    ./.github/actions/smoke-test/build.sh partcad
-    ./.github/actions/smoke-test/test.sh partcad
+./.github/actions/smoke-test/build.sh partcad
+./.github/actions/smoke-test/test.sh partcad
 ```
 
 ## TODO

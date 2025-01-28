@@ -1,5 +1,10 @@
 {
   "features": {
+    "ghcr.io/devcontainers-extra/features/devcontainers-cli:1": {
+      "version": "1.0.0",
+      "resolved": "ghcr.io/devcontainers-extra/features/devcontainers-cli@sha256:03149d3ccaeaffa766a1234b4c3e0f37e25a80101f888ce1ad75224b3b7ba888",
+      "integrity": "sha256:03149d3ccaeaffa766a1234b4c3e0f37e25a80101f888ce1ad75224b3b7ba888"
+    },
     "ghcr.io/devcontainers/features/common-utils": {
       "version": "2.5.2",
       "resolved": "ghcr.io/devcontainers/features/common-utils@sha256:5b1c376d30719a4dead8fb2f272ee496cfb506f2f92b7acf9e1c24cb5399ba7d",
