@@ -22,11 +22,11 @@
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"editor.fontFamily": "'Hack Nerd Font Mono'",
-				"terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
+				"editor.fontFamily": "'Hack Nerd Font Mono', monospace",
+				"terminal.integrated.fontFamily": "'Hack Nerd Font Mono', monospace",
 				"files.insertFinalNewline": true,
 				"dotfiles.repository": "partcad/dotfiles",
-				"cSpell.enableFiletypes": [
+				"cSpell.enabledFiletypes": [
 					"*"
 				],
 				"remote.extensionKind": {
