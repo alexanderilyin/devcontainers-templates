@@ -20,16 +20,3 @@ runs:
       id: test_template
       shell: bash
       run: ${{ github.action_path }}/test.sh  ${{ inputs.template }}
-
-#    - name: Login to GitHub Container Registry
-#      uses: docker/login-action@v3
-#      with:
-#        registry: ghcr.io
-#        username: ${{ github.actor }}
-#        password: ${{ env.GITHUB_TOKEN }}
-#
-#    # TODO: @alexanderilyin move to .github/workflows/release.yml
-#    - name: Apply Template, Build & Push Dev Container
-#      id: apply_template_build_push_dev_container
-#      shell: bash
-#      run: ${{ github.action_path }}/publish.sh  ${{ inputs.template }}
